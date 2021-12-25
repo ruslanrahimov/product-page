@@ -92,18 +92,18 @@ button {
 
 /*---------------  Custom Styles  ------------------*/
 
-.overlay{
-    visibility: hidden;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: #111113, $alpha: .8);
-    z-index: 2;
-    transition: visibility .2s ease-in-out;
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #111113, $alpha: 0.8);
+  z-index: 2;
+  transition: visibility 0.2s ease-in-out;
 }
 
 .container {
@@ -114,7 +114,6 @@ button {
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
-
 
 .header {
   &-container {
@@ -128,7 +127,7 @@ body {
 
   /* Closed Menu Button */
   &__burger-menu {
-      display: none;
+    display: none;
     flex-direction: column;
 
     .burger-item {
@@ -140,10 +139,6 @@ body {
 
     .burger-item + .burger-item {
       margin-top: 0.1875rem;
-    }
-
-    &:nth-child(1) {
-      margin-top: 6px;
     }
   }
   /* Closed Menu Button */
@@ -193,11 +188,58 @@ body {
   }
 
   &__basket {
+    position: relative;
     margin-right: $base * 11;
+
+    a {
+      svg {
+        &:hover {
+          fill: $black;
+        }
+      }
+    }
+
+    .basket-count {
+
+      display: none;
+      /* right: -30%;
+      top: -25%;
+
+      color: $white;
+      font-size: 9px;
+      position: absolute;
+
+      background-color: $primary_orange;
+      padding: 0.1rem 0.5rem;
+      border-radius: 50%; */
+    }
+  }
+
+  &__profile {
+    img {
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        border: 2px solid $primary_orange;
+      }
+    }
   }
 }
 
-/* Mobile Version */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
+/* ------------------- Mobile Version ------------------- */
 
 @media screen and (max-width: 375px) {
   .header {
@@ -210,11 +252,11 @@ body {
     }
 
     &__burger-menu {
-        display: flex;
+      display: flex;
     }
 
     &__burger-menu--opened {
-        display: block;
+      display: block;
     }
     &__menu {
       flex-direction: column;
@@ -227,11 +269,11 @@ body {
       position: absolute;
       left: -100%;
       top: 0;
-      transition: left .3s ease-in-out;
+      transition: left 0.3s ease-in-out;
       z-index: 3;
 
-      &.open__menu{
-          left: 0;
+      &.open__menu {
+        left: 0;
       }
 
       &-item {
